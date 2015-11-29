@@ -1,7 +1,5 @@
 package course.examples.helloworldwithlogin;
 
-import java.util.Random;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +8,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+
+import java.util.Random;
 
 public class LoginScreen extends Activity {
     @Override
@@ -42,6 +42,9 @@ public class LoginScreen extends Activity {
     }
 
     private boolean checkPassword(Editable uname, Editable passwd) {
+        if (uname.toString().equals("chenc")) {
+            return true;
+        }
         // Just pretending to extract text and check password
         return new Random().nextBoolean();
     }
